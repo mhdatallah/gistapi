@@ -1,3 +1,16 @@
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2b75db;
+}
+a span {
+    margin-right: 0.25em;
+}
+a img {
+    width: 1.5em;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
