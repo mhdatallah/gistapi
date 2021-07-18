@@ -6,7 +6,13 @@
 .owner {
     display: flex;
     align-items: center;
+    padding: 1em;
 }
+.owner img {
+    max-width: 4em;
+    border-radius: 2em;
+}
+
 .owner a {
     margin: 0 1em;
 }
@@ -18,7 +24,9 @@
     align-items: center;
 }
 
-img {
-    max-width: 4em;
-    border-radius: 2em;
+.dates {
+    display: flex;
+}
+.dates p {
+    margin: 1em;
 }

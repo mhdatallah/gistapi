@@ -13,6 +13,10 @@ const Gist = ({ gist }) => {
                 <a href={gist.owner.starred_url}>Stars</a>
             </div>
         </div>
+        <div className="dates">
+            <p>Created at: {new Date(gist.created_at).toLocaleDateString()}</p>
+            <p>Last updated: {new Date(gist.updated_at).toLocaleDateString()}</p>
+        </div>
     </>);
 };
 
