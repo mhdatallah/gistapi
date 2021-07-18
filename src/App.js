@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Header from "./components/Header";
-import GistList from "./components/GistList";
+import GistList from "./components/GistList/GistList";
 import GlobalStyles from "./GlobalStyle";
 import { getPublicGists } from "./services/gistService";
 
