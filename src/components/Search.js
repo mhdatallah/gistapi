@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import Octicon from 'react-octicon'
+import React from 'react';
+import styled from 'styled-components';
+import Octicon from 'react-octicon';
 
 const Search = () => {
   return (
