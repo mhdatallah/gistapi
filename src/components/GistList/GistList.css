@@ -8,6 +8,7 @@ ul {
 li {
     width: 50%;
     border-bottom: 1px solid lightgray;
+    padding-bottom: 3em;
 }
 li:last-child {
     border-bottom: none;

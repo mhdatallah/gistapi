@@ -34,3 +34,8 @@
 .description {
     font-size: large;
 }
+
+.files {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}

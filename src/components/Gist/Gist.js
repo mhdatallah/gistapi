@@ -17,7 +17,14 @@ const Gist = ({ gist }) => {
             <p>Created at: {new Date(gist.created_at).toLocaleDateString()}</p>
             <p>Last updated: {new Date(gist.updated_at).toLocaleDateString()}</p>
         </div>
-        {gist.description && <p className="description">{gist.description}</p>}
+        {gist.description &&
+            <p className="description">{gist.description}</p>
+        }
+        <div className="files">{
+            Object.keys(gist.files).map((key, i) =>
+                <a key={i} href={gist.files[key].raw_url}>{gist.files[key].filename}</a>
+            )
+        }</div>
     </>);
 };
 
