@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Octicon from 'react-octicon';
 
-const Search = () => {
+const Search = ({ onChange }) => {
   return (
     <Wrapper>
       <InputBox>
-      <Octicon name="search" />
-      <Input placeholder="Search Gists for the username"/>
+        <Octicon name="search" />
+        <Input placeholder="Search Gists for the username" onChange={onChange} />
       </InputBox>
     </Wrapper>
   )
