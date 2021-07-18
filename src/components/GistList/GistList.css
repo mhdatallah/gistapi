@@ -9,3 +9,6 @@ li {
     width: 50%;
     border-bottom: 1px solid lightgray;
 }
+li:last-child {
+    border-bottom: none;
+}
