@@ -1,15 +1,15 @@
 .header {
     display: flex;
     justify-content: space-between;
+    padding: 1em 0;
 }
 
 .owner {
     display: flex;
     align-items: center;
-    padding: 1em;
 }
 .owner img {
-    max-width: 4em;
+    max-width: 3em;
     border-radius: 2em;
 }
 
@@ -28,5 +28,9 @@
     display: flex;
 }
 .dates p {
-    margin: 1em;
+    margin-right: 1em;
+}
+
+.description {
+    font-size: large;
 }
