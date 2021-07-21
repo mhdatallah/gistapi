@@ -3,13 +3,13 @@ import React, { useEffect, useState, useCallback } from 'react';
 import styled from 'styled-components';
 import debounce from 'lodash.debounce';
 import Header from "./components/Header";
-import GistList from "./components/GistList";
 import GlobalStyles from "./GlobalStyle";
 import { getPublicGists, getGistForUser } from "./services/gistService";
+import GistsPage from './views/GistsPage';
 
 const App = () => {
   const [publicGists, setPublicGists] = useState([]); // the public gists
-  const [gists, setGists] = useState([]); // the gists to be displayed
+  const [gists, setGists] = useState(null); // the gists to be displayed
 
   // Get the public gists from the gist service
   const fetchPublicGists = () => {
@@ -52,8 +52,7 @@ const App = () => {
     <Wrapper className="App" data-testid="app">
       <Header onSearchChange={debouncedSerachHandler} />
       <GlobalStyles />
-      {gists.length > 0 && <GistList gists={gists} />}
-      {gists.length <= 0 && <NoResults>We can't find what you're looking for :(</NoResults>}
+      <GistsPage gists={gists} />
     </Wrapper>
   );
 }
