@@ -5,24 +5,24 @@ const Gist = ({ gist }) => {
     return (<>
         <Header>
             <Owner>
-                <img src={gist.owner.avatar_url} alt="avatar"></img>
-                <Link href={gist.owner.html_url}>{gist.owner.login}</Link>
+                <img data-testid="owner-avatar" src={gist.owner.avatar_url} alt="avatar"></img>
+                <Link data-testid="owner-username" href={gist.owner.html_url}>{gist.owner.login}</Link>
             </Owner>
             <Info>
-                <Link href="#"><Octicon name="file" />{Object.keys(gist.files).length} Files</Link>
-                <Link href={gist.forks_url}><Octicon name="repo-forked" />Forks</Link>
-                <Link href={gist.comments_url}><Octicon name="comment" />Comments</Link>
-                <Link href={gist.owner.starred_url}><Octicon name="star" />Stars</Link>
+                <Link data-testid="files" href="#"><Octicon name="file" />{Object.keys(gist.files).length} Files</Link>
+                <Link data-testid="forks" href={gist.forks_url}><Octicon name="repo-forked" />Forks</Link>
+                <Link data-testid="comments" href={gist.comments_url}><Octicon name="comment" />Comments</Link>
+                <Link data-testid="stars" href={gist.owner.starred_url}><Octicon name="star" />Stars</Link>
             </Info>
         </Header>
         <Dates>
-            <p>Created at: {new Date(gist.created_at).toLocaleDateString()}</p>
-            <p>Last updated: {new Date(gist.updated_at).toLocaleDateString()}</p>
+            <p data-testid="createdAt">Created at: {new Date(gist.created_at).toLocaleDateString()}</p>
+            <p data-testid="updatedAt">Last updated: {new Date(gist.updated_at).toLocaleDateString()}</p>
         </Dates>
         {gist.description &&
-            <Description>{gist.description}</Description>
+            <Description data-testid="description">{gist.description}</Description>
         }
-        <Files>{
+        <Files data-testid="filesList">{
             Object.keys(gist.files).map((key, i) =>
                 <Link key={i} href={gist.files[key].raw_url}><Octicon name="file" />{gist.files[key].filename}</Link>
             )
