@@ -6,6 +6,10 @@ import Header from "./components/Header";
 import GlobalStyles from "./GlobalStyle";
 import { getPublicGists, getGistForUser } from "./services/gistService";
 import GistsPage from './views/GistsPage';
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
 
 const App = () => {
   const [publicGists, setPublicGists] = useState([]); // the public gists
@@ -52,7 +56,14 @@ const App = () => {
     <Wrapper className="App" data-testid="app">
       <Header onSearchChange={debouncedSerachHandler} />
       <GlobalStyles />
-      <GistsPage gists={gists} />
+      <Router>
+        {/* Serve the Gists Page Page by default */}
+        <Route
+          path={["/", "/gists"]}
+          render={() => <GistsPage gists={gists} />}
+        />
+      </Router>
+      {/* <GistsPage gists={gists} /> */}
     </Wrapper>
   );
 }
@@ -60,11 +71,6 @@ const App = () => {
 const Wrapper = styled.div`
   font-size: 14px;
   line-height: 1.5;
-`;
-
-const NoResults = styled.p`
-  display: flex;
-  justify-content: center;
 `;
 
 export default App;
