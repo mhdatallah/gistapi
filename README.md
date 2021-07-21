@@ -12,18 +12,18 @@ We believe, for an ideal candidate, this should not take more than a couple of h
 
 ### Whats Expected
 Create a list of public gist available.
-- Search Gists for the username.
-- Use state management to save data and not make duplicate calls.
-- Show all the relevant meta data available in the response.
-- We do expect you to create and use proper component hierarchy keeping service and components exclusive.
-- Please use git version control.
+- <s>Search Gists for the username.</s>
+- <s>Use state management to save data and not make duplicate calls.</s>
+- <s>Show all the relevant meta data available in the response.</s>
+- <s>We do expect you to create and use proper component hierarchy keeping service and components exclusive.</s>
+- <s>Please use git version control.</s>
 
 ### Good to have
-- Proper handling of error message and no results screens.
-- Clean UI similar to [this](https://raw.githubusercontent.com/dubizzle-onboarding/gistapi/main/design_inspiration.png).
-- Unit Tests.
-- Optimised rendering.
-- Code comments.
+- <s>Proper handling of error message and no results screens.</s>
+- <s>Clean UI similar to [this](https://raw.githubusercontent.com/dubizzle-onboarding/gistapi/main/design_inspiration.png).</s>
+- <s>Unit Tests.</s>
+- <s>Optimised rendering.</s>
+- <s>Code comments.</s>
 - Type checking of the params.
 
 ### Thank you
